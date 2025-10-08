@@ -75,5 +75,11 @@ public class Student {
                 ", email='" + email + '\'' +
                 '}';
     }
+    // there is something else called lombok
+    // it can help to reduce boilerplate code
+    // by generating getters, setters, toString, etc. automatically
+    // To use it, you need to add the Lombok dependency to your project
+    // and then you can use annotations like @Getter, @Setter, @ToString, etc.
+    // For example:
     
 }
