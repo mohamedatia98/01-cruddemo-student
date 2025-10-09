@@ -24,6 +24,10 @@ public class Student {
     @Column(name = "email")
     private String email;
 
+    // ✅ Required by Hibernate ( this is a must to fix big error later )
+    public Student() {
+    }
+
     // define constructors
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
