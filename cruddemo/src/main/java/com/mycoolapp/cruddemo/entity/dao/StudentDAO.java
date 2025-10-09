@@ -6,4 +6,5 @@ public interface StudentDAO {
 
     void save(Student student);
 
+    Student findById(long id);
 }
