@@ -9,7 +9,6 @@ import jakarta.persistence.Id;
 @Entity
 public class Student {
 
-     
     // Define fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -81,5 +80,5 @@ public class Student {
     // To use it, you need to add the Lombok dependency to your project
     // and then you can use annotations like @Getter, @Setter, @ToString, etc.
     // For example:
-    
+
 }
