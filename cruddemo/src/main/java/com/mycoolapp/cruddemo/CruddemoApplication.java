@@ -18,11 +18,11 @@ public class CruddemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDAO studentdao) {
 		return runner -> {
-			CeateStudent(studentdao);
+			CreateAndReadStudent(studentdao);
 		};
 	}
 
-	private void CeateStudent(StudentDAO studentdao) {
+	private void CreateAndReadStudent(StudentDAO studentdao) {
 
 		// create the student object
 		System.out.println("Creating Student Object");
@@ -34,6 +34,12 @@ public class CruddemoApplication {
 
 		// display id of the saved students
 		System.out.println("Saved Student , Generated , Id : " + student.getId());
+
+		// New work with reading Id Function
+		long id = student.getId();
+		Student studentid = studentdao.findById(id);
+
+		System.out.println("Retrieving Student with id :" + studentid);
 	}
 
 }
