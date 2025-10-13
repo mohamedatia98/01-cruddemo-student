@@ -24,7 +24,7 @@ public class CruddemoApplication {
 
 	private void CreateAndReadStudent(StudentDAO studentdao) {
 
-		// create the student object
+		// create the student object ( Module - Entity - Table Structure )
 		System.out.println("Creating Student Object");
 		Student student = new Student("mohamed", "atia", "hola@gmail.com");
 
