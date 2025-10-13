@@ -1,5 +1,7 @@
 package com.mycoolapp.cruddemo.entity.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -7,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.mycoolapp.cruddemo.entity.Student;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 
 // Specialized annotation for repository classes 
 // Supports Components Scanning
@@ -33,6 +36,16 @@ public class StudentDAOImpl implements StudentDAO {
     @Override
     public Student findById(long id) {
         return entityManager.find(Student.class, id);
+    }
+
+    @Override
+    public List<Student> findAll() {
+        // Quries
+        // Create query
+        TypedQuery<Student> theQuery = entityManager.createQuery("From Student", Student.class);
+
+        // Return query Results
+        return theQuery.getResultList();
     }
 
 }
